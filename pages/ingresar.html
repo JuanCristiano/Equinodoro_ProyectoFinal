@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria equinodoro</title>
+    <link rel="stylesheet" href="../scss/estilos.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/bf225410e4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo de la libreria"></a>            
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Búsqueda en el catálogo">
+                <button type="submit">Buscar</button>
+            </div>          
+        </div>
+        <div class="header-right">
+            <h2>Administrador de sitio</h2>
+        </div>
+    </header>
+    <main>
+        <div class="contenedorFormularios">
+          <div class="col-12 col-md-6 text-center mt-2">
+            <h3>Libro</h3>
+            <form id="crearItem1" class="formularioItem" action="../index.html" method="POST" enctype="multipart/form-data">
+              <textarea name="titulo" placeholder="Título del libro" minlength="10" maxlength="100" required></textarea>
+              <textarea name="autor" placeholder="Autor del libro" minlength="10" maxlength="100" required></textarea>
+              <textarea name="sinopsis" placeholder="Sinopsis" minlength="10" maxlength="240"></textarea>
+              <textarea name="editorial" placeholder="Nombre de la editorial" required></textarea>
+              <input type="number" name="edicion" placeholder="Año de edición" required>
+              <input type="number" name="isbn" placeholder="ISBN del libro" required>
+              <input type="number" name="precio" placeholder="Valor del libro" min="100" max="250000" required>
+              <input type="number" name="stock" placeholder="Stock del título" min="1" required>
+              <input type="file" name="imagen" accept="image/*">
+              <select name="tematica">
+                <option value="maternidad">Maternidad</option>
+                <option value="crianza">Crianza</option>
+                <option value="infantil">Literatura Infantil</option>
+                <option value="general">Literatura general</option>
+              </select>
+              <button type="submit">Crear item</button>
+            </form>
+          </div>
+          <div class="col-12 col-md-6 text-center mt-2">
+            <h3>Artículo</h3>
+            <form id="crearItem2" class="formularioItem" action="../index.html" method="POST" enctype="multipart/form-data">
+              <input type="text" name="nombre" placeholder="Nombre del artículo" minlength="5" maxlength="50" required>
+              <input type="text" name="marca" placeholder="Marca del artículo" minlength="5" maxlength="50" required>              
+              <input type="text" name="proveedor" placeholder="Proveedor del artículo" minlength="5" maxlength="50" required>
+              <textarea name="descripcion" placeholder="Descripción del artículo" minlength="5" maxlength="240"></textarea>
+              <input type="text" name="numero_de_serie" placeholder="Número de serie" required>
+              <input type="number" name="precio de costo" placeholder="Precio costo" min="1" required>
+              <input type="number" name="precio publico" placeholder="Precio publico" min="1" required>
+              <input type="number" name="stock" placeholder="Stock del artículo" min="1" required>
+              <input type="file" name="imagen" accept="image/*">
+              <select name="tematica">
+                <option value="maternidad">Maternidad</option>
+                <option value="crianza">Crianza</option>
+                <option value="producto">Articulo general</option>
+              </select>
+              <button type="submit">Crear item</button>
+            </form>
+          </div>
+        </div>
+        <div id="tarjetasItems" class="tarjetasItems">
+
+        </div>
+      </main>
+      <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2 class="logo-text">Equinodoro Librería</h2>
+                <p>
+                  Nuestra librería cuenta con una amplia selección de libros que abarcan desde temas relacionados con el embarazo y el parto, hasta la crianza, la alimentación saludable y el desarrollo infantil.
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; +11648353306</span>
+                    <span><i class="fas fa-envelope"></i> &nbsp; info@equinodoro.com</span>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links text-center">
+                <h2>Enlaces rápidos</h2>
+                <br>
+                <ul>
+                    <a href="#"><li>Términos y condiciones</li></a>
+                    <a href="#"><li>Contáctanos</li></a>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contacto</h2>
+                <br>
+                <form action="./index.html" method="POST">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Tu dirección de correo electrónico">
+                    <textarea name="message" class="text-input contact-input" placeholder="Tu mensaje"></textarea>
+                    <button type="submit" class="btn btn-big">
+                        <i class="fas fa-envelope white"></i>
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; Equinodoro Librería | Todos los derechos reservados
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="../js/main.js"></script>
+    <script src="../js/administrador.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+.contenedorFormularios {
+    width: 95%;
+    height: auto;
+    display: flex;
+    padding: 10px;
+    margin: auto;
+    background-color: $color-tercero;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.formularioItem {
+    max-width: 600px; 
+    background-color: $color-primero;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formularioItem input, .formularioItem textarea {
+    background-color: $color-primero;
+    color: white;
+    border: none;
+    border-bottom: 1px solid $color-segundo;
+  }
+  
+  .formularioItem input {
+    max-width: 600px;
+    height: 50px;
+    
+  }
+  
+  .formularioItem input::-moz-placeholder, .formularioItem textarea::-moz-placeholder {
+    color: black
+  }
+  
+  .formularioItem input::placeholder, .formularioItem textarea::placeholder {
+    color: black
+  }
+  
+  .formularioItem input:focus, .formularioItem textarea:focus {
+    outline: none;
+  }
+  
+  .formularioItem select {
+    background-color: $color-primero;
+    border: none;
+    border-bottom: 1px solid $color-segundo;
+    padding: 10px;
+    color: $color-segundo;
+  }
+  .formularioItem button {
+    border-radius: 5px;
+    color: $color-primero;
+    background-color: $color-segundo;
+  }
+  
+  .tarjetasItems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 20px 20px 20px;
+  }
+  
+  .tarjeta {
+    background-color: $color-primero;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tarjeta h3 {
+    font-size: 18px;
+  }
+  
+  .tarjeta p {
+    font-size: 14px;
+  }
+  
+  .tarjeta span {
+    font-weight: bold;
+  }
